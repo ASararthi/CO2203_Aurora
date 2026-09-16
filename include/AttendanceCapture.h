@@ -10,7 +10,7 @@ public:
 
     virtual void beginSession(AttendanceSession& session) = 0;
 
-    virtual void captureNext() = 0;
+    virtual void captureNext(AttendanceSession& session) = 0;
 
     virtual void endSession() = 0;
 };
