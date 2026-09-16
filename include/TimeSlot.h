@@ -1,27 +1,29 @@
+#ifndef TIMESLOT_H
+#define TIMESLOT_H
+
 #include <iostream>
 #include <string>
-
-using namespace std;
 
 class TimeSlot
 {
 private:
-    string day;
-    string startTime;
-    string endTime;
-    string location;
+    std::string day;
+    std::string startTime;
+    std::string endTime;
+    std::string location;
 
 public:
-    TimeSlot(const string& day,
-             const string& startTime,
-             const string& endTime,
-             const string& location);
+    TimeSlot(const std::string& day,
+             const std::string& startTime,
+             const std::string& endTime,
+             const std::string& location);
 
     bool overlaps(const TimeSlot& other) const;
 
     bool operator==(const TimeSlot& other) const;
 
-    friend ostream& operator<<(ostream& os, const TimeSlot& slot);
+    friend std::ostream& operator<<(std::ostream& os,
+                                    const TimeSlot& slot);
 };
 
 #endif
