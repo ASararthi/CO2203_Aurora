@@ -13,18 +13,14 @@ private:
     StorageManager storage;
 
 public:
-    Application();
-
     void run();
 
-    Person* login(
+    bool login(
         const std::string& username,
         const std::string& password
     );
 
     void dispatchMenu();
-
-    ~Application();
 };
 
 #endif
