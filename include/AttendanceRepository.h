@@ -7,8 +7,8 @@
 class AttendanceRepository : public Repository<AttendanceRecord*>
 {
 public:
-    AttendanceRepository() = default;
-    ~AttendanceRepository() override = default;
+    void save();
+    void load();
 };
 
 #endif
