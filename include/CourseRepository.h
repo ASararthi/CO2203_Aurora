@@ -7,8 +7,8 @@
 class CourseRepository : public Repository<Course*>
 {
 public:
-    CourseRepository() = default;
-    ~CourseRepository() override = default;
+    void save();
+    void load();
 };
 
 #endif
