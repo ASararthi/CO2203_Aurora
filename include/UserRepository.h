@@ -7,8 +7,8 @@
 class UserRepository : public Repository<Person*>
 {
 public:
-    UserRepository() = default;
-    ~UserRepository() override = default;
+    void save();
+    void load();
 };
 
 #endif
