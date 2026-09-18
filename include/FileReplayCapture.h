@@ -2,23 +2,23 @@
 #define FILEREPLAYCAPTURE_H
 
 #include "AttendanceCapture.h"
-#include <string>
+
 #include <fstream>
+#include <string>
+
+class AttendanceSession;
 
 class FileReplayCapture : public AttendanceCapture
 {
 private:
     std::string filePath;
-    std::ifstream inputFile;
 
 public:
     FileReplayCapture(const std::string& path);
 
-    void beginSession() override;
+    void beginSession(AttendanceSession& session) override;
     std::string captureNext() override;
     void endSession() override;
-
-    ~FileReplayCapture() override;
 };
 
 #endif
