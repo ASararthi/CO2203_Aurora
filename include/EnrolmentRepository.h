@@ -7,8 +7,8 @@
 class EnrolmentRepository : public Repository<Enrolment*>
 {
 public:
-    EnrolmentRepository() = default;
-    ~EnrolmentRepository() override = default;
+    void save();
+    void load();
 };
 
 #endif
