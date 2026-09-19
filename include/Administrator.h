@@ -13,6 +13,16 @@ public:
                   const std::string& password);
 
     void showMenu() override;
+
+    void createUser(Person* p);
+
+    void removeUser(const std::string& id);
+
+    void createCourse(const std::string& courseId, const std::string& courseName); //added coursename as well
+
+    void removeCourse(const std::string& courseId);
+
+    std::string generateEnrolmentReport() const;
 };
 
 #endif
