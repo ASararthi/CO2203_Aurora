@@ -7,8 +7,10 @@
 class AttendanceRepository : public Repository<AttendanceRecord*>
 {
 public:
-    AttendanceRepository() = default;
-    ~AttendanceRepository() override = default;
+    AttendanceRepository()
+        : Repository<AttendanceRecord*>("attendance.txt")
+    {
+    }
 };
 
 #endif

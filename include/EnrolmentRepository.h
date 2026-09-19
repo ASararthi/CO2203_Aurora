@@ -7,8 +7,10 @@
 class EnrolmentRepository : public Repository<Enrolment*>
 {
 public:
-    EnrolmentRepository() = default;
-    ~EnrolmentRepository() override = default;
+    EnrolmentRepository()
+        : Repository<Enrolment*>("enrolment.txt")
+    {
+    }
 };
 
 #endif
