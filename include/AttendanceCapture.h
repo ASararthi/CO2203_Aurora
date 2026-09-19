@@ -2,7 +2,7 @@
 #define ATTENDANCECAPTURE_H
 
 class AttendanceSession;
-
+#include <string>
 class AttendanceCapture
 {
 public:
@@ -10,7 +10,7 @@ public:
 
     virtual void beginSession(AttendanceSession& session) = 0;
 
-    virtual void captureNext(AttendanceSession& session) = 0;
+    virtual std::string captureNext() = 0;
 
     virtual void endSession() = 0;
 };

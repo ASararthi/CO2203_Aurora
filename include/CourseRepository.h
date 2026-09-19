@@ -7,8 +7,10 @@
 class CourseRepository : public Repository<Course*>
 {
 public:
-    CourseRepository() = default;
-    ~CourseRepository() override = default;
+    CourseRepository()
+        : Repository<Course*>("courses.txt")
+    {
+    }
 };
 
 #endif

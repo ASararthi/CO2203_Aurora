@@ -7,10 +7,13 @@
 
 class LabCourse : public Course
 {
+
+private:
+    double labReportWeighting;
 public:
     LabCourse(const std::string& code,
               const std::string& title,
-              double creditValue,
+              int creditValue,
               int capacity);
 
     double computeGradeWeighting() const override;

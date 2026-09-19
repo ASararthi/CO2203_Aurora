@@ -3,18 +3,17 @@
 
 #include "AttendanceCapture.h"
 #include <string>
-#include <fstream>
+class AttendanceSession;
 
 class FileReplayCapture : public AttendanceCapture
 {
 private:
     std::string filePath;
-    std::ifstream inputFile;
 
 public:
     FileReplayCapture(const std::string& path);
 
-    void beginSession() override;
+    void beginSession(AttendanceSession& session) override;
     std::string captureNext() override;
     void endSession() override;
 

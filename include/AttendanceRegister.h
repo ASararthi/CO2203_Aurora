@@ -27,6 +27,8 @@ public:
 
     double attendancePercentageForCourse(const Course& course) const;
 
+    std::string eligibilityReport(double threshold) const;
+
     friend std::ostream& operator<<(std::ostream& os,
                                     const AttendanceRegister& reg);
 };

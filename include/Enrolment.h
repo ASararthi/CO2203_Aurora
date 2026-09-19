@@ -16,14 +16,12 @@ private:
 
 public:
     Enrolment(Student* student,
-              Course* course,
-              const std::string& enrolmentDate,
-              const std::string& status);
+              Course* course);
 
     Student* getStudent() const;
     Course* getCourse() const;
 
-    std::string getEnrolmentDate() const;
+    std::string getEnrolmentDate() const;//tell why we added this 
     std::string getStatus() const;
 };
 

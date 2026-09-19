@@ -2,7 +2,7 @@
 
 Course::Course(const std::string& code,
                const std::string& title,
-               double creditValue,
+               int creditValue,
                int capacity)
     : code(code),
       title(title),
@@ -24,11 +24,6 @@ bool Course::isFull() const
 std::string Course::getCode() const
 {
     return code;
-}
-
-std::string Course::getTitle() const
-{
-    return title;
 }
 
 std::ostream& operator<<(std::ostream& os, const Course& course)

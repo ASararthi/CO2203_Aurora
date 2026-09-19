@@ -9,21 +9,14 @@
 class StorageManager
 {
 private:
-    UserRepository userRepository;
-    CourseRepository courseRepository;
-    EnrolmentRepository enrolmentRepository;
-    AttendanceRepository attendanceRepository;
+    UserRepository users;
+    CourseRepository courses;
+    EnrolmentRepository enrolments;
+    AttendanceRepository attendance;
 
 public:
-    StorageManager() = default;
-
     void saveAll();
     void loadAll();
-
-    UserRepository& getUserRepository();
-    CourseRepository& getCourseRepository();
-    EnrolmentRepository& getEnrolmentRepository();
-    AttendanceRepository& getAttendanceRepository();
 };
 
 #endif
