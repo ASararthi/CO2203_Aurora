@@ -6,6 +6,11 @@
 
 class EnrolmentRepository : public Repository<Enrolment*>
 {
+public:
+    EnrolmentRepository()
+        : Repository<Enrolment*>("enrolment.txt")
+    {
+    }
 };
 
 #endif
