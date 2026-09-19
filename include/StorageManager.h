@@ -23,7 +23,7 @@ public:
     UserRepository& getUserRepository();
     CourseRepository& getCourseRepository();
     EnrolmentRepository& getEnrolmentRepository();
-    AttendanceRepository& getAttendanceRepository();
+    AttendanceRepository& getAttendanceRepository();//include in the design change log
 };
 
 #endif
