@@ -6,10 +6,12 @@
 
 class ProjectCourse : public Course
 {
+private:
+    double projectWeighting;
 public:
     ProjectCourse(const std::string& code,
                   const std::string& title,
-                  double creditValue,
+                  int creditValue,
                   int capacity);
 
     double computeGradeWeighting() const override;
