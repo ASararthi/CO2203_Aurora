@@ -6,9 +6,6 @@
 
 class UserRepository : public Repository<Person*>
 {
-public:
-    void save();
-    void load();
 };
 
 #endif
