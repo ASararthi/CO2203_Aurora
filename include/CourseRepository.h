@@ -6,6 +6,11 @@
 
 class CourseRepository : public Repository<Course*>
 {
+public:
+    CourseRepository()
+        : Repository<Course*>("courses.txt")
+    {
+    }
 };
 
 #endif
