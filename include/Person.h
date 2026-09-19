@@ -19,7 +19,7 @@ public:
 
     virtual ~Person();
 
-    virtual void showMenu() = 0;
+    virtual void showMenu() = 0; //this is our pure virtual function 
 
     std::string getId() const;
     std::string getName() const;
