@@ -6,9 +6,6 @@
 
 class EnrolmentRepository : public Repository<Enrolment*>
 {
-public:
-    void save();
-    void load();
 };
 
 #endif
