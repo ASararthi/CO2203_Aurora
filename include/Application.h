@@ -17,7 +17,7 @@ public:
 
     void run();
 
-    Person* login(
+    bool login(
         const std::string& username,
         const std::string& password
     );
