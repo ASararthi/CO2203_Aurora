@@ -2,7 +2,7 @@
 #define ATTENDANCECAPTURE_H
 
 class AttendanceSession;
-
+#include <string>
 class AttendanceCapture
 {
 public:
