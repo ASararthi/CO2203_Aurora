@@ -6,6 +6,11 @@
 
 class AttendanceRepository : public Repository<AttendanceRecord*>
 {
+public:
+    AttendanceRepository()
+        : Repository<AttendanceRecord*>("attendance.txt")
+    {
+    }
 };
 
 #endif
