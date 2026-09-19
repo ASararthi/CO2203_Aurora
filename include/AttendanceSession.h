@@ -37,7 +37,7 @@ public:
 
     bool getIsOpen() const;
 
-    void appendCorrection(AttendanceRecord& original, Lecturer& lecturer, std::string reason)
+    void appendCorrection(AttendanceRecord& original, Lecturer& lecturer, std::string reason);
 };
 
 #endif
