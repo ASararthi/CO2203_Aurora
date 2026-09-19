@@ -21,6 +21,8 @@ public:
     );
 
     void dispatchMenu();
+
+    ~Application();
 };
 
 #endif
