@@ -7,6 +7,8 @@
 #include "Course.h"
 #include "AttendanceSession.h"
 
+class Student;//why did we add this? because we are using student in the view enrolment list function
+
 class Lecturer : public Person
 {
 private:
