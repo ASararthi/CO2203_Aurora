@@ -4,6 +4,7 @@
 #include <string>
 #include "TimeSlot.h"
 #include "AttendanceCapture.h"
+#include "Lecturer.h"
 
 class Student;
 class AttendanceRecord;
@@ -35,6 +36,8 @@ public:
     const TimeSlot& getSlot() const;
 
     bool getIsOpen() const;
+
+    void appendCorrection(AttendanceRecord& original, Lecturer& lecturer, std::string reason)
 };
 
 #endif
