@@ -7,8 +7,10 @@
 class UserRepository : public Repository<Person*>
 {
 public:
-    UserRepository() = default;
-    ~UserRepository() override = default;
+    UserRepository()
+        : Repository<Person*>("users.txt")
+    {
+    }
 };
 
 #endif
