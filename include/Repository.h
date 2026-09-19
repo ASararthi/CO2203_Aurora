@@ -11,9 +11,13 @@ protected:
     std::vector<T> items;
 
 public:
+    Repository() = default;
+
     void add(T item);
     void remove(const std::string& id);
-    T* findById(const std::string& id);
+
+    T findById(const std::string& id);
+
     std::vector<T> findAll() const;
 
     void save();
