@@ -14,7 +14,7 @@ private:
 public:
     FileReplayCapture(const std::string& path);
 
-    void beginSession() override;
+    void beginSession(AttendanceSession& session) override;
     std::string captureNext() override;
     void endSession() override;
 
