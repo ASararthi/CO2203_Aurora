@@ -4,6 +4,7 @@
 #include "Person.h"
 #include <vector>
 #include <string>
+#include "Timetable.h"
 
 class Course;
 class Enrolment;
@@ -23,6 +24,9 @@ public:
 
     void enrol(Course& course);
     void drop(Course& course);
+    Timetable getTimetable() const;
+
+    void checkInWithCode(const std::string& code);
 };
 
 #endif
