@@ -3,7 +3,7 @@
 
 #include "AttendanceCapture.h"
 
-#include <fstream>
+
 #include <string>
 
 class AttendanceSession;
