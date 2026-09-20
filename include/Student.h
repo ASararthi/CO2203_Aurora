@@ -7,6 +7,7 @@
 
 class Course;
 class Enrolment;
+class Timetable;
 
 class Student : public Person
 {
@@ -23,6 +24,8 @@ public:
 
     void enrol(Course& course);
     void drop(Course& course);
+    Timetable getTimetable() const;
+    void checkInWithCode(const std::string& code);
 };
 
 #endif
