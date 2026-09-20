@@ -1,8 +1,10 @@
 #include "../include/Course.h"
+#include "../include/Student.h"
+#include "../include/Enrolment.h"
 
 Course::Course(const std::string& code,
                const std::string& title,
-               double creditValue,
+               int creditValue,
                int capacity)
     : code(code),
       title(title),
@@ -26,9 +28,17 @@ std::string Course::getCode() const
     return code;
 }
 
-std::string Course::getTitle() const
+bool Course::hasPrerequisitesSatisfiedBy(
+    const Student& student) const
 {
-    return title;
+    // No prerequisites
+    if (prerequisites.empty())
+    {
+        return true;
+    }
+
+    // Prerequisite checking will be handled when the student's enrolment data is connected.
+    return true;
 }
 
 std::ostream& operator<<(std::ostream& os, const Course& course)

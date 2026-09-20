@@ -5,14 +5,16 @@
 #include <vector>
 #include <ostream>
 
+class Student;
 class Lecturer;
+class Enrolment;
 
 class Course
 {
 protected:
     std::string code;
     std::string title;
-    double creditValue;
+    int creditValue;
     int capacity;
 
     Lecturer* lecturer;
@@ -21,18 +23,19 @@ protected:
 public:
     Course(const std::string& code,
            const std::string& title,
-           double creditValue,
+           int creditValue,
            int capacity);
 
     virtual ~Course();
 
-    virtual double computeGradeWeighting() const = 0;
+    virtual int computeGradeWeighting() const = 0;
     virtual std::string describeType() const = 0;
 
     bool isFull() const;
+    bool hasPrerequisitesSatisfiedBy(const Student& student) const;
 
     std::string getCode() const;
-    std::string getTitle() const;
+
 
     friend std::ostream& operator<<(std::ostream& os,
                                     const Course& course);

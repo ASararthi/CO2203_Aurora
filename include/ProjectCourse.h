@@ -9,10 +9,10 @@ class ProjectCourse : public Course
 public:
     ProjectCourse(const std::string& code,
                   const std::string& title,
-                  double creditValue,
+                  int creditValue,
                   int capacity);
 
-    double computeGradeWeighting() const override;
+    int computeGradeWeighting() const override;
     std::string describeType() const override;
 };
 

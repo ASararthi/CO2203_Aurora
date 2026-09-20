@@ -1,18 +1,6 @@
-#ifndef COURSE_FULL_EXCEPTION_H
-#define COURSE_FULL_EXCEPTION_H
+#include "../include/CourseFullException.h"
 
-#include "AppException.h"
-#include <string>
-
-class CourseFullException : public AppException
+CourseFullException::CourseFullException(const std::string& courseCode): AppException(
+          "Course " + courseCode + " is full.")
 {
-private:
-    std::string courseCode;
-    int capacity;
-
-public:
-    CourseFullException(const std::string& courseCode,
-                        int capacity);
-};
-
-#endif
+}

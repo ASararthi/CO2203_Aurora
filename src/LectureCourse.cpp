@@ -2,15 +2,15 @@
 
 LectureCourse::LectureCourse(const std::string& code,
                              const std::string& title,
-                             double creditValue,
+                             int creditValue,
                              int capacity)
     : Course(code, title, creditValue, capacity)
 {
 }
 
-double LectureCourse::computeGradeWeighting() const
+int LectureCourse::computeGradeWeighting() const
 {
-    return 100.0;
+    return 100;
 }
 
 std::string LectureCourse::describeType() const

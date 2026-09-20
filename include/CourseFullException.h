@@ -6,13 +6,9 @@
 
 class CourseFullException : public AppException
 {
-private:
-    std::string courseCode;
-    int capacity;
-
 public:
-    CourseFullException(const std::string& courseCode,
-                        int capacity);
+    explicit CourseFullException(
+        const std::string& courseCode);
 };
 
 #endif
